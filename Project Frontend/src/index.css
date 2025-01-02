@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    @apply box-border bg-none
+}
+
+.header-box{
+   @apply bg-gray-900 h-fit w-full flex justify-center items-center overflow-visible text-center
+}
+
+.header-text{
+    @apply bg-gradient-to-r from-amber-400 via-purple-800 to-purple-300 bg-clip-text text-transparent 
+    text-5xl font-mono font-extrabold p-2 overflow-hidden whitespace-nowrap
+}
+
+.record-table-wrapper{
+    @apply flex justify-center items-center flex-nowrap m-12
+            bg-black flex-shrink flex-grow overflow-scroll
+}
+
+.record-table{
+    @apply bg-white/80 backdrop-blur-lg rounded-sm p-10 table-fixed
+            border-separate border-solid border-black
+}
+
+.sidebar{
+    @apply flex flex-col justify-center items-center p-8 gap-8 fixed top-36 
+        bg-slate-400/65 backdrop-blur-2xl mr-auto min-w-52 border-collapse z-50
+}
+
+
+.wrapper{
+    @apply bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 
+        flex m-12 flex-row gap-4 flex-nowrap h-fit 
+        overflow-scroll snap-x snap-mandatory rounded-lg
+}
+
+.card{
+    @apply box-border min-w-52 min-h-60 p-10 border-solid bg-white/10 snap-center
+            rounded-lg drop-shadow-2xl flex flex-col items-center overflow-clip
+            cursor-pointer
+}
+
+.connect-btn{
+    @apply mt-4 px-3 py-2 bg-blue-500/70 text-white text-xs font-medium rounded-md hover:bg-blue-500/90 active:bg-blue-600/70 overflow-clip
+}
+
+
+::-webkit-scrollbar{
+    @apply w-0 h-0 bg-white/70
+}
+
+::-webkit-scrollbar-track{
+    @apply w-4 h-4 bg-slate-700
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-lg
+}
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/60
+}
+
+
+@media(max-width: 575px){
+    .header-box{
+        @apply bg-gray-900 h-auto w-screen flex justify-center align-middle overflow-visible text-center flex-shrink
+    }
+    .header-text{
+        @apply text-wrap
+    }
+}
